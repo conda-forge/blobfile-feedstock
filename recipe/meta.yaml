@@ -1,5 +1,5 @@
 {% set name = "blobfile" %}
-{% set version = "2.0.0" %}
+{% set version = "2.0.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/christopher-hesse/blobfile/archive/v{{ version }}.tar.gz
-  sha256: 6f61b68068d24f574174a4454e06c665a8a81ab2be79677433c5227b852bd528
+  sha256: a31160ae709a09566773a2a014dd155d247c675c81f162b76343e83f42c823ed
 
 build:
   noarch: python

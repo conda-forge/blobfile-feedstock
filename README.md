@@ -1,11 +1,11 @@
-About blobfile
-==============
+About blobfile-feedstock
+========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/blobfile-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/christopher-hesse/blobfile
 
 Package license: Unlicense
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/blobfile-feedstock/blob/main/LICENSE.txt)
 
 Summary: Read Google Cloud Storage, Azure Blobs, and local paths with the same interface
 

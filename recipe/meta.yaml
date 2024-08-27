@@ -1,5 +1,5 @@
 {% set name = "blobfile" %}
-{% set version = "2.1.0" %}
+{% set version = "3.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/christopher-hesse/blobfile/archive/v{{ version }}.tar.gz
-  sha256: 630fe77760f39aa53c7637e3cdac2d77434415a2230c0256bd603e48f7624017
+  sha256: 0da77924def7d930045318fe602654c11888a47abb13e962cf7bf06f04cfe204
 
 build:
   noarch: python
@@ -18,12 +18,13 @@ requirements:
   host:
     - python >=3.8
     - pip
+    - setuptools >=64
   run:
     - python >=3.8
-    - pycryptodomex >=3.8,<4.dev0
+    - pycryptodomex >=3.8
     - urllib3 >=1.25.3,<3
-    - lxml >=4.9,<5.dev0
-    - filelock >=3.0,<4.dev0
+    - lxml >=4.9
+    - filelock >=3.0
 
 test:
   imports:

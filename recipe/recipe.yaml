@@ -1,21 +1,20 @@
 schema_version: 1
 
 context:
-  name: blobfile
-  version: "3.2.0"
+  version: 3.3.0
 
 package:
-  name: ${{ name|lower }}
+  name: blobfile
   version: ${{ version }}
 
 source:
-  url: https://github.com/christopher-hesse/blobfile/archive/v${{ version }}.tar.gz
-  sha256: 0f3404a05aff1f2effa2b328852bff37de90ee49f910148110caace22890949c
+  url: https://files.pythonhosted.org/packages/source/b/blobfile/blobfile-${{ version }}.tar.gz
+  sha256: 98bd9fafed8d0175d315a5b605680f522949057e16cb4932b07ce5a5f67e8985
 
 build:
   number: 0
+  script: ${{ PYTHON }} -m pip install .
   noarch: python
-  script: ${{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:

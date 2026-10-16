@@ -1,0 +1,48 @@
+schema_version: 1
+
+context:
+  version: 3.3.0
+
+package:
+  name: blobfile
+  version: ${{ version }}
+
+source:
+  url: https://files.pythonhosted.org/packages/source/b/blobfile/blobfile-${{ version }}.tar.gz
+  sha256: 98bd9fafed8d0175d315a5b605680f522949057e16cb4932b07ce5a5f67e8985
+
+build:
+  number: 0
+  script: ${{ PYTHON }} -m pip install .
+  noarch: python
+
+requirements:
+  host:
+    - python ${{ python_min }}.*
+    - pip
+    - setuptools >=64
+  run:
+    - python >=${{ python_min }}
+    - pycryptodomex >=3.8
+    - urllib3 >=2
+    - lxml >=4.9
+    - filelock >=3.0
+
+tests:
+  - python:
+      imports:
+        - blobfile
+      pip_check: true
+      python_version:
+        - ${{ python_min }}.*
+        - '*'
+
+about:
+  license: Unlicense
+  license_file: LICENSE
+  summary: Read Google Cloud Storage, Azure Blobs, and local paths with the same interface
+  homepage: https://github.com/christopher-hesse/blobfile
+
+extra:
+  recipe-maintainers:
+    - BastianZim
